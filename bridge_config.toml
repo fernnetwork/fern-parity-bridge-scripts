@@ -1,0 +1,34 @@
+estimated_gas_cost_of_withdraw = "200000"
+max_total_home_contract_balance = "10000000000000000000"
+max_single_deposit_value = "1000000000000000000"
+
+[home]
+account = "0x06ecd9d5f588a57d6e696253f95265bd61bee378"
+ipc = "home/jsonrpc.ipc"
+required_confirmations = 0 
+
+[home.contract]
+bin = "contracts/HomeBridge.bin"
+
+[foreign]
+account = "0x06ecd9d5f588a57d6e696253f95265bd61bee378"
+ipc = "foreign/jsonrpc.ipc"
+required_confirmations = 0
+
+[foreign.contract]
+bin = "contracts/ForeignBridge.bin"
+
+[authorities]
+accounts = [
+	"0x06ecd9d5f588a57d6e696253f95265bd61bee378", "0xb29e5a8f79cabfa1e70034f0eab3fbda92b3185d", "0xb261dd3e16698eb3e47bb99dc09324a0c9cf6fa8"
+]
+required_signatures = 0
+
+[transactions]
+home_deploy = { gas = 1000000 , gas_price = 0 }
+withdraw_relay = { gas = 200000 , gas_price = 0 }
+
+foreign_deploy = { gas = 3000000 , gas_price = 0 }
+deposit_relay = { gas = 150000 , gas_price = 0 }
+
+withdraw_confirm = { gas = 300000 , gas_price = 0 }
