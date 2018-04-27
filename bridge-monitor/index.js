@@ -1,8 +1,8 @@
 'use strict'
 
 const { AUTHORITY_ADDRESS } = require('./config')
-const homeNetwork = require('./homeNetwork')
-const foreignNetwork = require('./foreignNetwork')
+const homeBridge = require('./homeNetwork').getContract()
+const foreignBridge = require('./foreignNetwork').getContract()
 
 const eventLogger = (type) => {
   return (error, event) => {
@@ -14,14 +14,10 @@ const eventLogger = (type) => {
   }
 }
 
-const homeContract = homeNetwork.getContract()
-homeContract.events.allEvents(eventLogger('HOME'))
-homeContract.events.Deposit(eventLogger('DEPOSIT'))
-
-const foreignContract = foreignNetwork.getContract()
-foreignContract.events.allEvents(eventLogger('FOREIGN'))
+homeBridge.events.allEvents(eventLogger('HOME'))
+foreignBridge.events.allEvents(eventLogger('FOREIGN'))
 
 setInterval(async () => {
-  const result = await foreignContract.methods.balanceOf(AUTHORITY_ADDRESS).call()
+  const result = await foreignBridge.methods.balanceOf(AUTHORITY_ADDRESS).call()
   console.log(`[BALANCE] ${AUTHORITY_ADDRESS} now has ${result} tokens in foreign network.`)
 }, 5000)

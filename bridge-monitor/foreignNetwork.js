@@ -13,7 +13,6 @@ const abiJSON = fs.readFileSync(path.join(__dirname, '../compiled_contracts/Fore
 const abi = JSON.parse(abiJSON)
 
 module.exports = {
-  web3,
   getContract: () => {
     console.log(`Retrieving contract ${CONTRACT_NAME} (${FOREIGN_CONTRACT_ADDRESS}) from ${FOREIGN_PARITY_WS}.`)
     return new web3.eth.Contract(abi, FOREIGN_CONTRACT_ADDRESS)
