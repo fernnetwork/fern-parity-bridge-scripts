@@ -11,10 +11,6 @@ Tested with 9fef322 of [Parity Bridge](https://github.com/paritytech/parity-brid
 
 ## Start Parity Bridge
 
-### Prerequisites
-- parity
-- parity-bridge
-
 ### Steps
 1. Copy the `parity-bridge` & `parity-bridge-deploy` binaries from `bin` to a folder in your `PATH`
 2. Start a parity node connecting to the home (Kovan) network: 
@@ -89,9 +85,9 @@ Data: {
 ```
 
 ### Withdrawing tokens from Foreign Network back to the Foreign Network
-1. If you want to see the events and results in action, mmake sure to start the `Bridge Monitor`.
-2. Follow the steps in the above section to transfer 0.001 eth into the foreign network. Verify that you have at least 0.001 eth in the foreign network using `Bridge Monitor`.
-3. Run the `npm run withdraw` task to trigger the withdraw. By default, it attempts to withdraw 0.001 eth.
+1. If you want to see the events and results in action, make sure to start the `Bridge Monitor`.
+2. Follow the steps in the above section to transfer 0.001 eth into the foreign network. Verify that you have at least 0.001 eth worth of tokens (1000000000000000) in the foreign network using `Bridge Monitor`.
+3. Run the `npm run withdraw` task to trigger the withdraw. By default, it attempts to withdraw 1000000000000000 tokens.
 4. Check the `Bridge Monitor` for results. If you see something like below, the tokens is successfully withdrawn and transferred back to the address in the home network.
 ```
 [BALANCE] 0x06ecd9d5f588a57d6e696253f95265bd61bee378 now has 2000000000000000 tokens in foreign network.
