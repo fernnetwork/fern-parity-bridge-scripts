@@ -1,0 +1,26 @@
+{
+  "name": "fern-bridge-setup",
+  "version": "1.0.0",
+  "description": "Experimental scripts and configuration files for running a parity bridge instance between Fern and Kovan network.",
+  "main": "bridge-monitor/index.js",
+  "scripts": {
+    "start": "node --require dotenv/config bridge-monitor",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appliedblockchain/fern-parity-bridge-scripts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/appliedblockchain/fern-parity-bridge-scripts/issues"
+  },
+  "homepage": "https://github.com/appliedblockchain/fern-parity-bridge-scripts#readme",
+  "dependencies": {
+    "web3": "^1.0.0-beta.34"
+  },
+  "devDependencies": {
+    "dotenv": "^5.0.1"
+  }
+}

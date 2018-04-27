@@ -2,3 +2,5 @@ node_modules
 bridge_db.toml
 .env
 .vscode
+.DS_Store
+deployment-*
