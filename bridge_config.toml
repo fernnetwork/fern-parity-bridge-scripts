@@ -20,9 +20,9 @@ bin = "contracts/ForeignBridge.bin"
 
 [authorities]
 accounts = [
-	"0x06ecd9d5f588a57d6e696253f95265bd61bee378", "0xb29e5a8f79cabfa1e70034f0eab3fbda92b3185d", "0xb261dd3e16698eb3e47bb99dc09324a0c9cf6fa8"
+	"0x06ecd9d5f588a57d6e696253f95265bd61bee378"
 ]
-required_signatures = 0
+required_signatures = 1
 
 [transactions]
 home_deploy = { gas = 1000000 , gas_price = 0 }

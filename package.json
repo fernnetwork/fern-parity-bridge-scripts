@@ -4,6 +4,7 @@
   "description": "Experimental scripts and configuration files for running a parity bridge instance between Fern and Kovan network.",
   "main": "bridge-monitor/index.js",
   "scripts": {
+    "prestart": "npm i",
     "start": "node --require dotenv/config bridge-monitor",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

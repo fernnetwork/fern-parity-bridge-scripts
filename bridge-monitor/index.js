@@ -9,7 +9,7 @@ const eventLogger = (type) => {
     if(error) {
       console.error(`[${type}] Error: ${error}`)
     } else {
-      console.log(`[${type}] Event: ${event.event}\nData: ${event.returnValues}`)
+      console.log(`[${type}] Event: ${event.event}\nData: ${JSON.stringify(event.returnValues, null, 2)}`)
     }
   }
 }

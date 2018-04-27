@@ -4,9 +4,6 @@ chain = "chain.json"
 [account]
 password = ["password"]
 
-[network]
-# reserved_peers = "/parity/reserved_peers"
-
 [ui]
 interface = "0.0.0.0"
 
