@@ -5,6 +5,8 @@ The setup uses a test address `0x06ecd9d5f588a57d6e696253f95265bd61bee378` with 
 
 To test this, make sure you create an account and request some ethers from [faucet](https://gitter.im/kovan-testnet/faucet).
 
+Tested with 9fef322 of [Parity Bridge](https://github.com/paritytech/parity-bridge).
+
 # Getting Started
 
 ## Start Parity Bridge
