@@ -8,7 +8,7 @@ ipc = "home/jsonrpc.ipc"
 required_confirmations = 0 
 
 [home.contract]
-bin = "contracts/HomeBridge.bin"
+bin = "compiled_contracts/HomeBridge.bin"
 
 [foreign]
 account = "0x06ecd9d5f588a57d6e696253f95265bd61bee378"
@@ -16,7 +16,7 @@ ipc = "foreign/jsonrpc.ipc"
 required_confirmations = 0
 
 [foreign.contract]
-bin = "contracts/ForeignBridge.bin"
+bin = "compiled_contracts/ForeignBridge.bin"
 
 [authorities]
 accounts = [
