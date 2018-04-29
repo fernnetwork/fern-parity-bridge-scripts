@@ -128,4 +128,4 @@ Data: {
   "transactionHash": "0x0208b23c0a6eda8fece6a503ecd6cca04bc500d2e87e03fbea709ec5e222ba77"
 }
 ```
-5. Verify your balance on [Etherscan](https://kovan.etherscan.io).
+5. Verify your eth balance on [Etherscan](https://kovan.etherscan.io).
