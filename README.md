@@ -1,17 +1,17 @@
 # Fern-Kovan Bridge
-Experimental scripts and configuration files for running a parity bridge instance between Fern and Kovan network.
+Scripts and configuration files for testing parity bridge between Fern and Kovan network.
+
+Tested with `9fef322` of [Parity Bridge](https://github.com/paritytech/parity-bridge).
 
 The setup uses a test address `0x06ecd9d5f588a57d6e696253f95265bd61bee378` with some ethers in the Kovan network.
 
 To test this, make sure you create an account and request some ethers from [faucet](https://gitter.im/kovan-testnet/faucet).
 
-Tested with 9fef322 of [Parity Bridge](https://github.com/paritytech/parity-bridge).
+## Getting Started
 
-# Getting Started
+### Start Parity Bridge
 
-## Start Parity Bridge
-
-### Steps
+#### Steps
 1. Copy the `parity-bridge` & `parity-bridge-deploy` binaries from `bin` to a folder in your `PATH`
 2. Start a parity node connecting to the home (Kovan) network: 
 ```
@@ -30,14 +30,15 @@ $ sh bridge_deploy.sh
 $ sh bridge_start.sh
 ```
 
-## Start Bridge Monitor
+### Bridge Monitor
+Bridge Monitor is a simple nodejs app that monitors the bridge contracts from both networks, and output events to the console.
 
 ### Prerequisites
 - nodejs >= v8.11.1
 
 ### Steps
 1. Copy the `.env.example` file to `.env`
-2. Replace the `HOME_CONTRACT_ADDRESS` and `FOREIGN_CONTRACT_ADDRESS` with the addresses from the deployment. You can find it under `bridge_db.toml` after parity-bridge contracts are deployed.
+2. Replace the `HOME_CONTRACT_ADDRESS` and `FOREIGN_CONTRACT_ADDRESS` with the addresses from the deployment. You can find them under `bridge_db.toml` after parity-bridge contracts are deployed.
 3. Run the Bridge Monitor:
 ```
 $ npm start
@@ -50,10 +51,10 @@ $ npm start
 - MetaMask installed
 
 ### Depositing eth from Home Network into the Foreign Network
-1. If you want to see the events and results in action, mmake sure to start the `Bridge Monitor`.
+1. If you want to see the events and results in action, make sure to start the `Bridge Monitor`.
 2. Open MetaMask and switch to Kovan network.
 3. Make sure the correct account is selected, transfer a small amount of ether to the `HOME_CONTRACT_ADDRESS` (you can find the address from `bridge_db.toml` after you complete parity bridge deployment)
-4. You should see the following events from `Bridge Monitor`:
+4. Once the transaction is submitted, you should see the following events from `Bridge Monitor`:
 ```
 [HOME] Event: Deposit
 Data: {
@@ -128,5 +129,3 @@ Data: {
 }
 ```
 5. Verify your balance on [Etherscan](https://kovan.etherscan.io).
-
-Yay!
