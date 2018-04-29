@@ -1,5 +1,10 @@
 'use strict'
-
+/**
+ * Bridge Monitor is a simple nodejs app that monitors the bridge contracts from both networks, and
+ *  output events to the console.
+ * 
+ * @author Jimmy Chen
+ */
 const { AUTHORITY_ADDRESS } = require('./config')
 const homeBridge = require('./homeNetwork').getContract()
 const foreignBridge = require('./foreignNetwork').getContract()

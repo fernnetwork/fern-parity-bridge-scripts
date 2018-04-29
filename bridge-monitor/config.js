@@ -1,5 +1,9 @@
 'use strict'
-
+/**
+ * Reads predefined configurations from environment variables and expose as a config object to other components.
+ *
+ * @author Jimmy Chen
+ */
 const configItems = [
   { name: 'HOME_PARITY_WS' },
   { name: 'FOREIGN_PARITY_WS' },

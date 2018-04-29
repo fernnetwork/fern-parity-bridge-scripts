@@ -1,5 +1,9 @@
 'use strict'
-
+/**
+ * Creates a contract instance for interacting with the HomeBridge smart contract.
+ *
+ * @author Jimmy Chen
+ */
 const { HOME_PARITY_WS, HOME_CONTRACT_ADDRESS } = require('./config')
 const CONTRACTS_DIR = '../compiled_contracts'
 const CONTRACT_NAME = 'HomeBridge'

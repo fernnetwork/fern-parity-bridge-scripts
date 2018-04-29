@@ -1,4 +1,7 @@
 'use strict'
+/**
+ * Script for making a withdraw from the foreign network using the `ForeignBridge.transferHomeViaRelay` function.
+ */
 const { AUTHORITY_ADDRESS } = require('./config')
 const foreignContract = require('./foreignNetwork').getContract()
 

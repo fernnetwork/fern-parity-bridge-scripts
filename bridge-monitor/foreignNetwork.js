@@ -1,5 +1,9 @@
 'use strict'
-
+/**
+ * Creates a contract instance for interacting with the ForeignBridge smart contract.
+ *
+ * @author Jimmy Chen
+ */
 const { FOREIGN_PARITY_WS, FOREIGN_CONTRACT_ADDRESS } = require('./config')
 const CONTRACTS_DIR = '../compiled_contracts'
 const CONTRACT_NAME = 'ForeignBridge'
