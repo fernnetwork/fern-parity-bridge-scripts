@@ -1,4 +1,4 @@
-# Fern-Kovan Bridge
+# fern-parity-bridge-scripts
 Scripts and configuration files for testing parity bridge between Fern and Kovan network.
 
 Tested with `9fef322` of [Parity Bridge](https://github.com/paritytech/parity-bridge).
