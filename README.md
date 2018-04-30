@@ -7,11 +7,9 @@ The `bin` directory contains parity bridge binaries built from `bdc00d1` of [par
 
 To run and test the bridge locally, you will have to create an account and request some ethers from [faucet](https://gitter.im/kovan-testnet/faucet).
 
-## Getting Started
+# Getting Started
 
-### Start Parity Bridge
-
-#### Steps
+## Start Parity Bridge
 1. Copy the `parity-bridge` & `parity-bridge-deploy` binaries from `bin` to a folder in your `PATH`
 2. Start a parity node connecting to the home (Kovan) network: 
 ```
@@ -30,7 +28,7 @@ $ sh bridge_deploy.sh
 $ sh bridge_start.sh
 ```
 
-### Bridge Monitor
+## Bridge Monitor
 Bridge Monitor is a simple nodejs app that monitors the bridge contracts from both networks, and output events to the console.
 
 ### Prerequisites
@@ -44,7 +42,7 @@ Bridge Monitor is a simple nodejs app that monitors the bridge contracts from bo
 $ npm start
 ```
 
-## Steps for Transferring Between the Two Networks
+## Transferring eth/tokens between the two networks
 
 ### Prerequisites
 - Parity bridge running
