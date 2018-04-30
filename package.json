@@ -6,23 +6,32 @@
   "scripts": {
     "prestart": "npm i",
     "start": "node --require dotenv/config bridge-monitor",
+    "lint": "eslint . --fix",
     "withdraw": "node --require dotenv/config bridge-monitor/withdraw.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/appliedblockchain/fern-parity-bridge-scripts.git"
+    "url": "git+https://github.com/fernnetwork/fern-parity-bridge-scripts.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Jimmy Chen",
+  "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/appliedblockchain/fern-parity-bridge-scripts/issues"
+    "url": "https://github.com/fernnetwork/fern-parity-bridge-scripts/issues"
   },
-  "homepage": "https://github.com/appliedblockchain/fern-parity-bridge-scripts#readme",
+  "homepage": "https://github.com/fernnetwork/fern-parity-bridge-scripts#readme",
+  "eslintConfig": {
+    "extends": "@appliedblockchain/eslint-config/node",
+    "rules": {
+      "valid-jsdoc": [ "warn", { "requireParamDescription": false, "requireReturnDescription": false } ]
+    }
+  },
   "dependencies": {
     "web3": "^1.0.0-beta.34"
   },
   "devDependencies": {
-    "dotenv": "^5.0.1"
+    "@appliedblockchain/eslint-config": "^2.0.0",
+    "dotenv": "^5.0.1",
+    "eslint": "^4.19.1"
   }
 }

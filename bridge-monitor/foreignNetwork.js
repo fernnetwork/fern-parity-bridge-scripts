@@ -13,7 +13,7 @@ const web3 = new Web3(FOREIGN_PARITY_WS)
 
 const fs = require('fs')
 const path = require('path')
-const abiJSON = fs.readFileSync(path.join(__dirname, '../compiled_contracts/ForeignBridge.abi'))
+const abiJSON = fs.readFileSync(path.join(__dirname, CONTRACTS_DIR, `${CONTRACT_NAME}.abi`))
 const abi = JSON.parse(abiJSON)
 
 module.exports = {

@@ -15,11 +15,11 @@ const configItems = [
 const config = {}
 const missing = []
 
-for (let item of configItems) {
+for (const item of configItems) {
   const name = item.name
 
-  if (process.env[ name ]) {
-    config[ name ] = process.env[ name ]
+  if (process.env[name]) {
+    config[name] = process.env[name]
   } else if (!item.optional) {
     missing.push(name)
   }
