@@ -1,11 +1,11 @@
 # fern-parity-bridge-scripts
-Scripts and configuration files for testing parity bridge between Fern and Kovan network.
+Fern uses the `parity-bridge` project to connect private PoA networks to a public network like ethereum. The bridge will enable token transfers between the networks.
 
-Tested with `9fef322` of [Parity Bridge](https://github.com/paritytech/parity-bridge).
+This repository contains scripts and configuration files for testing parity bridge between a private PoA network and the Kovan network.
 
-The setup uses a test address `0x06ecd9d5f588a57d6e696253f95265bd61bee378` with some ethers in the Kovan network.
+The `bin` directory contains parity bridge binaries built from `bdc00d1` of [parity-bridge](https://github.com/paritytech/parity-bridge).
 
-To test this, make sure you create an account and request some ethers from [faucet](https://gitter.im/kovan-testnet/faucet).
+To run and test the bridge locally, you will have to create an account and request some ethers from [faucet](https://gitter.im/kovan-testnet/faucet).
 
 ## Getting Started
 
