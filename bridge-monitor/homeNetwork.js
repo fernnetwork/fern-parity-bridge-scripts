@@ -4,15 +4,15 @@
  *
  * @author Jimmy Chen
  */
+const fs = require('fs')
+const path = require('path')
+const Web3 = require('web3')
 const { HOME_PARITY_WS, HOME_CONTRACT_ADDRESS } = require('./config')
+
 const CONTRACTS_DIR = '../compiled_contracts'
 const CONTRACT_NAME = 'HomeBridge'
 
-const Web3 = require('web3')
 const web3 = new Web3(HOME_PARITY_WS)
-
-const fs = require('fs')
-const path = require('path')
 const abiJSON = fs.readFileSync(path.join(__dirname, CONTRACTS_DIR, `${CONTRACT_NAME}.abi`))
 const abi = JSON.parse(abiJSON)
 
